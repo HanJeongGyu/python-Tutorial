@@ -1,98 +1,87 @@
-### **변수와 데이터 타입**
+### **1. 주석 **
 
-파이썬에서는 변수를 선언할 때 특별한 키워드 없이 바로 할당할 수 있습니다. 데이터 타입은 자동으로 인식됩니다.
+주석은 코드에 설명을 추가할 때 사용하며, 프로그램 실행에는 영향을 주지 않는다. 주석은 **`#`** 기호로 시작한다.
 
-```jsx
-x = 10          # int
-y = 20.5        # float
-name = "Alice"  # str
-is_student = True  # bool
-```
-
-### **리스트, 튜플, 딕셔너리**
-
-- **리스트(List)**: 변경 가능(mutable)한 데이터 컬렉션이다.
-- **튜플(Tuple)**: 변경 불가능(immutable)한 데이터 컬렉션이다.
-- **딕셔너리(Dictionary)**: 키-값 쌍으로 이루어진 데이터 컬렉션이다.
-
-```jsx
-# 리스트
-fruits = ["apple", "banana", "cherry"]
-print(fruits[0])  # apple
-
-# 튜플
-coordinates = (10, 20)
-print(coordinates[1])  # 20
-
-# 딕셔너리
-person = {"name": "John", "age": 30}
-print(person["name"])  # John
+```python
+pythonCopy code
+# 이것은 주석이다
 
 ```
 
-### **제어 구조**
+### **2. 변수 **
 
-- **조건문(If-Else)**: 조건에 따라 코드의 실행 경로를 결정한다.
-- **반복문(For, While)**: 코드 블록을 여러 번 실행한다.
+변수는 값을 저장하는 데 사용되며, 자료형을 동적으로 결정한다.
 
-```jsx
-# If-Else 조건문
-age = 20
-if age >= 18:
-    print("You are an adult.")
+```python
+pythonCopy code
+x = 5           # 정수
+y = 3.14        # 부동 소수점
+name = "Alice"  # 문자열
+is_true = True  # 불리언
+
+```
+
+### **3. 자료형 (Data Types)**
+
+- **정수(int)**, **부동 소수점(float)**, **문자열(str)**, **불리언(bool)** 등이 있다.
+- 파이썬은 동적으로 타입을 결정하므로 변수를 선언할 때 타입을 명시적으로 지정할 필요가 없다.
+
+### **4. 조건문 **
+
+조건에 따라 코드의 실행을 제어한다.
+
+```python
+pythonCopy code
+if condition:
+    # 조건이 참일 때 실행되는 코드
+elif another_condition:
+    # 다른 조건이 참일 때 실행되는 코드
 else:
-    print("You are a minor.")
-
-# For 반복문
-for fruit in fruits:
-    print(fruit)
-
-# While 반복문
-i = 0
-while i < len(fruits):
-    print(fruits[i])
-    i += 1
+    # 모든 조건이 거짓일 때 실행되는 코드
 
 ```
 
-### **함수**
+### **5. 반복문 **
 
-파이썬에서 함수는 **`def`** 키워드를 사용하여 정의합니다. 함수는 코드의 재 사용성을 높여 줍니다.
+- **for 반복문**: 시퀀스(리스트, 튜플 등)의 각 요소에 대해 반복한다.
+- **while 반복문**: 조건이 참일 때 반복힌다.
 
-```jsx
-def greet(name):
-    print("Hello, " + name + "!")
+```python
+pythonCopy code
+for item in sequence:
+    # 코드 블록
 
-greet("Alice")
-
-```
-
-### **예제: 간단한 계산기**
-
-두 숫자를 입력 받아 덧셈, 뺄셈, 곱셈, 나눗셈을 수행하는 간단한 계산기를 만듭니다.
-
-```jsx
-def add(x, y):
-    return x + y
-
-def subtract(x, y):
-    return x - y
-
-def multiply(x, y):
-    return x * y
-
-def divide(x, y):
-    if y == 0:
-        return "Error! Division by zero."
-    else:
-        return x / y
-
-# 사용 예
-print(add(10, 5))       # 15
-print(subtract(10, 5))  # 5
-print(multiply(10, 5))  # 50
-print(divide(10, 5))    # 2.0
+while condition:
+    # 코드 블록
 
 ```
 
-#
+### **6. 리스트 **
+
+여러 항목을 담을 수 있는 순서가 있는 자료구조이다.
+
+```python
+pythonCopy code
+my_list = [1, 2, 3, 4, 5]
+
+```
+
+### **7. 튜플 **
+
+리스트와 유사하지만 수정이 불가능하고 괄호를 사용하여 선언한다.
+
+```python
+pythonCopy code
+my_tuple = (1, 2, 3)
+
+```
+
+### **8. 딕셔너리 **
+
+키-값 쌍을 저장하는 자료구조이다.
+
+```python
+pythonCopy code
+my_dict = {"key1": "value1", "key2": "value2"}
+
+```
